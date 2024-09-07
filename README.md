@@ -16,7 +16,7 @@ This was a fun project, and I'm excited to see what else I can build with these 
 
 ## V2
 
-The initial version was used 2100+ times. Mostly well received, but I did receive criticism in a UCSD discord server.
+The initial version was used 2100+ times. Mostly well received, but I did get criticism in a UCSD discord server.
 
 Most feedback was related to usability—outside of course info, V1 wasn't that useful.
 
@@ -24,4 +24,6 @@ This time around, I've added more embeddings data (primarily focused on gen ed r
 
 V2 also uses GPT-4o mini (as opposed to 3.5) and a newer embeddings model from OpenAI.
 
-V2 is designed to be more user-friendly, especially on phones (V1 admittedly wasn't great in this regard)
+V2 is designed to be more user-friendly, especially on phones (V1 admittedly wasn't great in this regard).
+
+I've also added authentication. Not a pain point for users, but I don't want people to burn through my OpenAI credits.
