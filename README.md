@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ucsdGPT
 
-## Getting Started
+This is a chatbot based on courses at the University of California, San Diego.
 
-First, run the development server:
+I built this project with LangChain, Supabase, and Next.js.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## V1
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Initially, I copy-and-pasted all UCSD undergraduate courses into a text file. Then, using LangChain and Supabase, I created vector embeddings (arrays that capture the semantic meaning of text) for all 3,898 courses.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Once the data was in place, I created a basic chatbot script using Langchain. This script considered context from relevant course descriptions and the original question from the user.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Using Next.js, I turned this script into a server action. This action runs whenever a user submits the chatbot form.
 
-## Learn More
+This was a fun project, and I'm excited to see what else I can build with these tools.
 
-To learn more about Next.js, take a look at the following resources:
+## V2
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The initial version was used 2100+ times. Mostly well received, but I did receive criticism in a UCSD discord server.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Most feedback was related to usability—outside of course info, V1 wasn't that useful.
 
-## Deploy on Vercel
+This time around, I've added more embeddings data (primarily focused on gen ed requirements for UCSD's 8 colleges). I also added relevant schedule information.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+V2 also uses GPT-4o mini (as opposed to 3.5) and a newer embeddings model from OpenAI.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+V2 is designed to be more user-friendly, especially on phones (V1 admittedly wasn't great in this regard)
