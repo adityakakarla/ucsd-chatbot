@@ -1,29 +1,31 @@
 # ucsdGPT
 
-This is a chatbot based on courses at the University of California, San Diego.
+**ucsdGPT** is a chatbot designed to assist with course information and general education requirements at the University of California, San Diego (UCSD). This project leverages **LangChain**, **Supabase**, and **Next.js** to provide tailored responses based on UCSD's extensive course catalog and academic requirements.
 
-I built this project with LangChain, Supabase, and Next.js.
+## Technologies Used
+- **LangChain**: For context-aware chatbot interactions.
+- **Supabase**: For managing vector embeddings and user data.
+- **Next.js**: For building the frontend and server-side functionality.
 
-## V1
+## Project Overview
 
-Initially, I copy-and-pasted all UCSD undergraduate courses into a text file. Then, using LangChain and Supabase, I created vector embeddings (arrays that capture the semantic meaning of text) for all 3,898 courses.
+### V1: Proof of Concept
 
-Once the data was in place, I created a basic chatbot script using Langchain. This script considered context from relevant course descriptions and the original question from the user.
+The initial version of ucsdGPT was built as a basic chatbot for UCSD course information.
 
-Using Next.js, I turned this script into a server action. This action runs whenever a user submits the chatbot form.
+- **Data Setup**: I compiled all 3,898 undergraduate courses into a text file and created vector embeddings to represent the semantic meaning of each course description.
+- **Chatbot Creation**: Using LangChain, I developed a chatbot capable of answering course-related queries by pulling context from course descriptions.
+- **Server Actions**: I implemented the chatbot functionality as a server action in a Next.js app, which executes whenever a user submits a question through the chatbot form.
 
-This was a fun project, and I'm excited to see what else I can build with these tools.
+Despite being a fun and rewarding project, **V1** had limitations, particularly in its utility beyond course information.
 
-## V2
+### V2: Usability Enhancements
 
-The initial version was used 2100+ times. Mostly well received, but I did get criticism in a UCSD discord server.
+After **V1** was used over 2,100 times, I received valuable feedback—mainly from the UCSD Discord server—that helped shape **V2**.
 
-Most feedback was related to usability—outside of course info, V1 wasn't that useful.
+- **Expanded Dataset**: I added more data, including general education requirements for UCSD's eight colleges and schedule information to improve the chatbot's usefulness.
+- **Upgraded Models**: V2 now uses **GPT-4o mini** (upgrading from GPT-3.5) and a newer embeddings model from OpenAI to enhance response accuracy and depth.
+- **Mobile Optimization**: Recognizing that many users access the chatbot on their phones, I focused on improving the mobile user experience.
+- **User Authentication**: While not a noted pain point, I've now added authentication and content moderation
 
-This time around, I've added more embeddings data (primarily focused on gen ed requirements for UCSD's 8 colleges). I also added relevant schedule information.
-
-V2 also uses GPT-4o mini (as opposed to 3.5) and a newer embeddings model from OpenAI.
-
-V2 is designed to be more user-friendly, especially on phones (V1 admittedly wasn't great in this regard).
-
-I've also added authentication. Not a pain point for users, but I don't want people to burn through my OpenAI credits.
+V2 represents a significant improvement in both functionality and user experience, and I'm excited to continue iterating on this project.
