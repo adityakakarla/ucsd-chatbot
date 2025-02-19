@@ -1,3 +1,4 @@
+## Note: I shut down this project because I ran out of projects on Supabase's free tier
 # ucsdGPT
 
 **ucsdGPT** is a chatbot designed to assist with course information and general education requirements at the University of California, San Diego (UCSD). This project leverages **LangChain**, **Supabase**, and **Next.js** to provide tailored responses based on UCSD's extensive course catalog and academic requirements.
